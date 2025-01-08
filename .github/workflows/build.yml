@@ -75,7 +75,7 @@ jobs:
           java-version: '23'
           cache: gradle
           
-       -name: Make Gradlew executable
+      - name: Make Gradlew executable
         run: chmod +x ./gradlew
 
       - name: Package with Gradle
