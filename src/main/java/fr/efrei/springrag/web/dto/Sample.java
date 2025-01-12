@@ -1,3 +1,5 @@
+package fr.efrei.springrag.web.dto;
+
 public class Sample {
     private String value;
 
@@ -5,7 +7,7 @@ public class Sample {
         this.value = value;
     }
 
-    public string getValue(){
+    public String getValue(){
         return value;
     }
 }

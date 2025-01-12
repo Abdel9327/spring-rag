@@ -1,3 +1,7 @@
+package fr.efrei.springrag.domain;
+
+import jakarta.persistence.*;
+
 @Entity
 public class Document {
     @Id
