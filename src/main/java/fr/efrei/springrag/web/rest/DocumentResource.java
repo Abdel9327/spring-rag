@@ -22,7 +22,7 @@ public class DocumentResource {
 
     @PostMapping("/documents")
     public ResponseEntity<Document> createDocument(@RequestBody Document document) throws URISyntaxException {
-        Document result = documentService.buildAndSaveDocument(document);
+        Document result = documentService.buildAndSave(document);
         return ResponseEntity
                 .created(new URI("/documents/" + result.getId()))
                 .body(result);
@@ -30,7 +30,7 @@ public class DocumentResource {
 
     @GetMapping("/documents")
     public ResponseEntity<List<Document>> findAllDocuments() throws URISyntaxException {
-        List<Document> result = documentService.findAllDocuments();
+        List<Document> result = documentService.findAll();
         return ResponseEntity
                 .ok()
                 .body(result);
@@ -38,7 +38,7 @@ public class DocumentResource {
 
     @GetMapping("/documentsById")
     public ResponseEntity<Optional<Document>> findDocumentById(Long id) throws URISyntaxException {
-        Optional<Document> result = documentService.findDocumentById(id);
+        Optional<Document> result = documentService.findById(id);
         return ResponseEntity
                 .ok()
                 .body(result);
@@ -46,7 +46,7 @@ public class DocumentResource {
 
     @DeleteMapping("/documents/{id}")
     public ResponseEntity<Void> deleteDocument(@PathVariable Long id) throws URISyntaxException {
-        documentService.deleteDocument(id);
+        documentService.deleteById(id);
         return ResponseEntity.ok().build();
     }
 
