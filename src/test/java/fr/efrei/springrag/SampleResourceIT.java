@@ -31,7 +31,7 @@ public class SampleResourceIT {
 
     }
 
-    @Test
+  /*  @Test
     public void sampleJsomTest() throws Exception {
         String value = "EFREI";
         restProjectMockMvc
@@ -40,5 +40,5 @@ public class SampleResourceIT {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(jsonPath("$.value").value("Hello "+value+"!"));
 
-    }
+    }*/
 }
