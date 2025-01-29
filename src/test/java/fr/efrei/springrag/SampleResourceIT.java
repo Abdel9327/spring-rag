@@ -30,15 +30,4 @@ public class SampleResourceIT {
                 .andExpect(content().string("Hello " + value + "!"));
 
     }
-
-  /*  @Test
-    public void sampleJsomTest() throws Exception {
-        String value = "EFREI";
-        restProjectMockMvc
-                .perform(get(ENTITY_API_URL + "/dto/"+value))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
-                .andExpect(jsonPath("$.value").value("Hello "+value+"!"));
-
-    }*/
 }
